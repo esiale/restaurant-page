@@ -1,6 +1,9 @@
-import "./style.css";
-import Background from "./bg.jpg";
-import renderMenu from "./menu.js";
+import "./styles/style.css";
+import Background from "./img/bg.jpg";
+import clearMain from "./modules/methods.js";
+import renderHome from "./modules/home.js";
+import renderMenu from "./modules/menu.js";
+import renderContact from "./modules/contact.js";
 
 function createLayout() {
     const content = document.getElementById("content");
@@ -36,27 +39,7 @@ function createLayout() {
     content.append(wrapper);
 }
 
-function renderHome() {
-    clearMain("home");
-    const main = document.querySelector("main");
-
-    main.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum nesciunt, quibusdam, aliquid quod, at labore explicabo tempore quos perferendis minus officia nostrum perspiciatis architecto nobis maxime soluta harum vitae molestias magni id incidunt. Debitis placeat tempora veniam impedit dicta aut earum labore minus, deserunt velit at consectetur, accusamus, voluptatibus nobis neque eum quia expedita fuga deleniti architecto vero a voluptate. Illum eveniet repudiandae, rem officia veritatis quaerat error illo. Quod, reprehenderit sit earum porro nam vel aliquid numquam accusamus voluptates. Provident mollitia placeat asperiores a deleniti totam accusantium ratione quae, quibusdam veritatis obcaecati similique! Ducimus dolor nisi excepturi fugiat et!";
-}
-
-function clearMain(currentTab) {
-    const main = document.querySelector("main");
-    main.className = currentTab;
-
-    while(main.firstChild) {
-        main.removeChild(main.firstChild);
-    }
-}
-
 createLayout();
 renderHome();
-
-function renderContact() {
-    alert("Render Menu");
-}
 
 export default clearMain
