@@ -1,6 +1,4 @@
 import "./styles/style.css";
-import Background from "./img/bg.jpg";
-import clearMain from "./modules/methods.js";
 import renderHome from "./modules/home.js";
 import renderMenu from "./modules/menu.js";
 import renderContact from "./modules/contact.js";
@@ -41,5 +39,3 @@ function createLayout() {
 
 createLayout();
 renderHome();
-
-export default clearMain
